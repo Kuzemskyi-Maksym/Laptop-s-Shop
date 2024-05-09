@@ -101,10 +101,7 @@ DATABASES = {
     }
 }
 
-# AUTHENTICATION_BACKENDS = [
-#     "django.contrib.auth.backends.ModelBackend",
-#     "allauth.account.auth_backends.AuthenticationBackend",
-# ]
+
 
 
 # Password validation
@@ -151,14 +148,6 @@ MEDIA_ROOT = BASE_DIR / "media_cdn"
 
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_USE_TLS = True
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_HOST_USER = 'savavlvsv@gmail.com'
-# EMAIL_HOST_PASSWORD = 'Maxim12052008'
-# EMAIL_PORT = 587
-
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
