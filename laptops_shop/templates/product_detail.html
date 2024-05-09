@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head_title %}
+  {{ title }}
+{% endblock %}
+
+{% block css %}
+  {{ block.super }}
+  <link href="{% static 'css/product_detail.css' %}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+  <div class="container mx-0" style="min-width: 100%; max-width: 100%; margin-top: 100px !important;">
+    <div class="row">
+      <div class="product-photo col-6">
+        <img src="{{ object.image.url }}" class="card-img-top" alt=" " style="min-width: 700px; max-width: 700px; min-height: 500px;max-height: 500px; border-radius: 10px;" />
+      </div>
+      <div class="product-info col-6">
+        <div class="title container" style="font-size: 25px; margin-bottom: 20px; padding-right: 70px !important;">{{ object.name }}</div>
+        <div class="description container" style="font-size: 16px; margin-bottom: 20px; padding-right: 70px !important;">{{ object.description }}</div>
+        <div class="rating container margin-bottom: 20px;">{{ object.rating }}</div>
+        <div class="price container">{{ object.price }}</div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+{% block js %}
+  {{ block.super }}
+  <script src="{% static 'js/product_detail.js' %}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+{% endblock %}

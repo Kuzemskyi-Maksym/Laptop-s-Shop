@@ -1,0 +1,164 @@
+{% load static  %}
+
+<link rel="stylesheet" href="{% static 'css/navbar.css' %}" />
+
+<div class="site-mobile-menu site-navbar-target burger">
+  <div class="site-mobile-menu-header badge-dark" style="height: 56.3px;">
+    <a class="navbar-brand" href="/shop"><img src="{% static 'images/logo.png' %}" alt="" class="d-inline-block align-text-top logo_photo_burger" /></a>
+    <div class="site-mobile-menu-close mt-3">
+      <span class="icon-close2 js-menu-toggle p-0" style="border: 1px solid white; border-radius: 20%;"></span>
+    </div>
+  </div>
+  <div class="site-mobile-menu-body container p-0 m-0" style="overflow-y: hidden; height: auto;">
+    <div class="pt-3 container bg-dark m-0 p-0" style="height: 100px; overflow-x: hidden;">
+      <div class="row mt-3 p-0 d-flex justify-content-evenly">
+        <div class="h5 col-3 text-white p-0 my-0 mx-0">Sign In</div>
+        <div class="m-0 p-0 vr"></div>
+        <div class="h5 text-white col-3 p-0 my-0">Sign Up</div>
+      </div>
+    </div>
+    {% comment %} {% endcomment %}
+    <div class="container px-1 py-1 m-0" style="height: 55px; border-bottom: 2px solid #9c9c9c; ">
+      <div class="row side_menu_block h-100 m-0">
+        <div class="col-3 p-0 m-0 h-100" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px; ">
+          <img src="{% static 'images/home.svg' %}" alt="" style="height: 30px; scale: 0.7;" class="mx-auto my-auto w-100 h-100" />
+        </div>
+        <div class="col-9 p-0 m-0 h-100" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px; font-size: 25px; text-align: start; align-content: center;">Home</div>
+      </div>
+    </div>
+    {% comment %} {% endcomment %}
+    <div class="container px-1 py-1 m-0" style="height: 55px; ">
+      <div class="row side_menu_block h-100 m-0">
+        <div class="col-3 p-0 m-0 h-100" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+          <img src="{% static 'images/smartphones.svg' %}" alt="" style="height: 30px; scale: 0.7;" class="mx-auto my-auto w-100 h-100" />
+        </div>
+        <div class="col-9 p-0 m-0 h-100" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px; font-size: 25px; text-align: start; align-content: center;">Smartphones</div>
+      </div>
+    </div>
+    <div class="container px-1 py-1 m-0" style="height: 55px;">
+      <div class="row side_menu_block h-100 m-0">
+        <div class="col-3 p-0 m-0 h-100" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+          <img src="{% static 'images/tablet.svg' %}" alt="" style="height: 30px; scale: 0.7;" class="mx-auto my-auto w-100 h-100" />
+        </div>
+        <div class="col-9 p-0 m-0 h-100" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px; font-size: 25px; text-align: start; align-content: center;">Tablets</div>
+      </div>
+    </div>
+    <div class="container px-1 py-1 m-0" style="height: 55px; border-bottom: 2px solid #9c9c9c; ">
+      <div class="row side_menu_block h-100 m-0">
+        <div class="col-3 p-0 m-0 h-100" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+          <img src="{% static 'images/laptop.svg' %}" alt="" style="height: 30px; scale: 0.7;" class="mx-auto my-auto w-100 h-100" />
+        </div>
+        <div class="col-9 p-0 m-0 h-100" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px; font-size: 25px; text-align: start; align-content: center;">Laptops</div>
+      </div>
+    </div>
+    {% comment %} {% endcomment %}
+    <div class="container px-1 py-1 m-0" style="height: 55px;  ">
+      <div class="row side_menu_block h-100 m-0">
+        <div class="col-3 p-0 m-0 h-100" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px; ">
+          <img src="{% static 'images/help_center.svg' %}" alt="" style="height: 30px; scale: 0.7;" class="mx-auto my-auto w-100 h-100" />
+        </div>
+        <div class="col-9 p-0 m-0 h-100" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px; font-size: 25px; text-align: start; align-content: center;">Help Center</div>
+      </div>
+    </div>
+    <div class="container px-1 py-1 m-0" style="height: 55px; border-bottom: 2px solid #9c9c9c; ">
+      <div class="row side_menu_block h-100 m-0">
+        <div class="col-3 p-0 m-0 h-100" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+          <img src="{% static 'images/ai_consultant.svg' %}" alt="" style="height: 30px; scale: 0.7;" class="mx-auto my-auto w-100 h-100" />
+        </div>
+        <div class="col-9 p-0 m-0 h-100" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px; font-size: 25px; text-align: start; align-content: center;">AI Consultant</div>
+      </div>
+    </div>
+    {% comment %} {% endcomment %}
+    <div class="container px-1 py-1 m-0" style="height: 55px; border-bottom: 2px solid #9c9c9c; ">
+      <div class="row side_menu_block h-100 m-0">
+        <div class="col-3 p-0 m-0 h-100" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+          <img src="{% static 'images/cart_dark.svg' %}" alt="" style="height: 30px; scale: 0.7;" class="mx-auto my-auto w-100 h-100" />
+        </div>
+        <div class="col-9 p-0 m-0 h-100" style="border-top-right-radius: 10px; border-bottom-right-radius: 10px; font-size: 25px; text-align: start; align-content: center;">Shopping Cart</div>
+      </div>
+    </div>
+    {% comment %} {% endcomment %}
+    <div class="conteiner m-0 p-0 py-3 download_our_apps text-bg-dark">
+      <div class="mb-2" style="font-weight: bolder; text-align: center;">Download our apps</div>
+      <div class="row m-0 p-0 d-flex justify-content-evenly">
+        <div class="col-5">
+          <a href="#" tabIndex="0"><img class="bn46 mx-auto my-auto w-100 h-100" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="bn45" /></a>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-5">
+          <a href="#" tabIndex="0"><img class="bn45 mx-auto my-auto w-100 h-100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/2560px-Google_Play_Store_badge_EN.svg.png" alt="bn45" /></a>
+        </div>
+      </div>
+    </div>
+    {% comment %} {% endcomment %}
+    <div class="container px-1 py-1 m-0" style="height: 55px;">
+      <div class="row h-100 m-0">
+        <div class="col-3 p-0 m-0 h-100" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+          <img src="{% static 'images/instagramm.svg' %}" alt="" title="Instagramm" style="height: 30px; scale: 0.7;" class="mx-auto my-auto w-100 h-100" />
+        </div>
+        <div class="col-3 p-0 m-0 h-100" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+          <img src="{% static 'images/twitter.svg' %}" alt="" title="Twitter" style="height: 30px; scale: 0.7;" class="mx-auto my-auto w-100 h-100" />
+        </div>
+        <div class="col-3 p-0 m-0 h-100" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+          <img src="{% static 'images/facebook.svg' %}" alt="" title="Facebook" style="height: 30px; scale: 0.7;" class="mx-auto my-auto w-100 h-100" />
+        </div>
+        <div class="col-3 p-0 m-0 h-100" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+          <img src="{% static 'images/youtube.svg' %}" alt="" title="YouTube" style="height: 30px; scale: 0.7;" class="mx-auto my-auto w-100 h-100" />
+        </div>F
+      </div>
+    </div>
+    {% comment %} {% endcomment %}
+  </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="row align-items-center position-relative main_nav">
+    <div class="col-3 ml-auto text-right order-2"></div>
+
+    <div class="col-9 order-1 text-left mr-auto">
+      <span class="d-inline-block d-lg-block"><a href="#" class="text-light site-menu-toggle js-menu-toggle py-5"><span class="icon-menu h3 text-light"></span></a></span>
+
+      <nav class="site-navigation text-right ml-auto d-none d-lg-none" role="navigation"></nav>
+    </div>
+  </div>
+  <a class="navbar-brand" href="/shop"><img src="{% static 'images/logo.png' %}" alt="" class="d-inline-block align-text-top logo_photo" style="margin-left: 20px;" /></a>
+
+  {% if user.is_authenticated %}
+    <form class="d-flex mx-auto me-2" id="search_form">
+      <input class="input_form_search_registered form-control me-2" type="search" placeholder="Search for..." aria-label="Пошук" />
+      <button class="btn btn-outline-success search_button" type="submit">Search</button>
+    </form>
+    <div class="language container row col-1 ms-5">
+      <div class="row d-flex justify-content-between">
+        <div class="h5 col-5 text-white p-0 my-0 mx-0">UA</div>
+        <div class="m-0 p-0 vr"></div>
+        <div class="h5 text-white col-5 p-0 my-0">EN</div>
+      </div>
+    </div>
+    <div class="container registered p-0 m-0" style="width: 300px;">
+      <div class="row align-items-center registered d-flex justify-content-evenly m-0">
+        <img src="{% static 'images/orders.svg' %}" alt="" title="orders" class="orders p-0 col-2" />
+        <img src="{% static 'images/wishlist.svg' %}" alt="" title="wishlist" class="wishlist p-0 col-2" />
+        <img src="{% static 'images/cart.svg' %}" alt="" title="cart" class="cart p-0 col-2" />
+        <img src="{% static 'images/user_acc.svg' %}" alt="" title="account" class="account p-0 col-2" />
+      </div>
+    </div>
+  {% else %}
+    <form class="d-flex mx-auto me-2" id="search_form">
+      <input class="input_form_search_not_registered form-control me-2" type="search" placeholder="Search for..." aria-label="Пошук" />
+      <button class="btn btn-outline-success search_button" type="submit">Search</button>
+    </form>
+    <div class="language container row col-1 ms-5">
+      <div class="row d-flex justify-content-between">
+        <div class="h5 col-5 text-white p-0 my-0 mx-0">UA</div>
+        <div class="m-0 p-0 vr"></div>
+        <div class="h5 text-white col-5 p-0 my-0">EN</div>
+      </div>
+    </div>
+    <div class="container visitors p-0 m-0" style="width: 300x;">
+      <div class="row align-items-center d-flex justify-content-center m-0" style="margin: auto !important;">
+        <img src="{% static 'images/user_acc.svg' %}" alt="" title="sign In/sign Up" class="signIn_signUp p-0" />
+      </div>
+    </div>
+  {% endif %}
+</nav>
