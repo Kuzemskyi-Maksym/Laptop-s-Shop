@@ -58,18 +58,8 @@ MIDDLEWARE = [
     #  "allauth.account.middleware.AccountMiddleware",
 ]
 
-# Provider specific settings
-# SOCIALACCOUNT_PROVIDERS = {
-#     'google': {
-#         'APP': {
-#             'client_id': '438397521431-5kf4tu0bgls0cu0gagqvnlihr1i6b455.apps.googleusercontent.com',
-#             'secret': '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',
-#             'key': ''
-#         }
-#     }
-# }
 
-# AUTH_USER_MODEL = 'accounts.CustomUser'
+
 
 ROOT_URLCONF = "conf.urls"
 
