@@ -45,7 +45,45 @@ INSTALLED_APPS = [
     "crispy_forms",
     "crispy_bootstrap5",
     "accounts",
-    "shop",]
+    "shop",
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+]
+
+LOGIN_REDIRECT_URL = 'shop:home'
+ACCOUNT_LOGOUT_REDIRECT_URL = 'shop:home'
+ACCOUNT_EMAIL_REQUIRED = True
+SOCIALACCOUNT_QUERY_EMAIL = True
+ACCOUNT_SESSION_REMEMBER = True
+
+ACCOUNT_SIGNUP_FORM_CLASS = 'accounts.forms.UserRegistrationForm'
+
+
+SITE_ID = 1  # Replace with your actual site ID
+
+
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
+
+
+SOCIALACCOUNT_PROVIDERS = {
+    "google": {
+        "SCOPE": [
+            "profile",
+            "email",
+        ],
+        "AUTH_PARAMS": {
+            "access_type": "online",
+        },
+        "OAUTH_PKCE_ENABLED": True,
+    }
+}
+LOGIN_REDIRECT_URL = "/shop"  # Redirect URL after successful login (optional)
+
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -55,10 +93,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    #  "allauth.account.middleware.AccountMiddleware",
+    "allauth.account.middleware.AccountMiddleware",
 ]
-
-
 
 
 ROOT_URLCONF = "conf.urls"
@@ -100,8 +136,6 @@ DATABASES = {
         "PORT": os.environ["DATABASE_PORT"],
     }
 }
-
-
 
 
 # Password validation
