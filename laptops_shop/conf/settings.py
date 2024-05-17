@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 from pathlib import Path
 
 import os
+from django.conf.global_settings import LOGIN_URL
 from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -52,13 +53,13 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.google',
 ]
 
+LOGIN_URL = 'accounts:login'
 LOGIN_REDIRECT_URL = 'shop:home'
-ACCOUNT_LOGOUT_REDIRECT_URL = 'shop:home'
+ACCOUNT_LOGOUT_REDIRECT_URL ="shop:home"
+LOGOUT_REDIRECT_URL = "shop:home"  # new
 ACCOUNT_EMAIL_REQUIRED = True
 SOCIALACCOUNT_QUERY_EMAIL = True
 ACCOUNT_SESSION_REMEMBER = True
-
-ACCOUNT_SIGNUP_FORM_CLASS = 'accounts.forms.UserRegistrationForm'
 
 
 SITE_ID = 1  # Replace with your actual site ID
@@ -68,6 +69,7 @@ AUTHENTICATION_BACKENDS = (
     "django.contrib.auth.backends.ModelBackend",
     "allauth.account.auth_backends.AuthenticationBackend",
 )
+
 
 
 SOCIALACCOUNT_PROVIDERS = {

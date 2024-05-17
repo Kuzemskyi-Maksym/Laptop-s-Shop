@@ -6,8 +6,8 @@
 {% get_providers as socialaccount_providers %}
 {% load allauth i18n %}
 {% block head_title %}
-    Sign Up
-{% endblock head_title %}
+        SignUp
+{% endblock %}
 
 <style>
     body {
@@ -35,14 +35,13 @@
         {% blocktranslate %}Already have an account? Then please {{ link }}sign in{{ end_link }}.{% endblocktranslate %}
     {% endelement %} {% endcomment %}
     {% if not SOCIALACCOUNT_ONLY %}
-        {% url 'account_signup' as action_url %}
 
 
             <div class="bg-gray-100 text-gray-900 flex justify-center"
             style="height: calc(100vh - 60px) !important; margin-top: 60px !important;">
             <div class="max-w-screen-xl m-0 sm:m-20 bg-white shadow sm:rounded-lg flex justify-center flex-1"
                 style="height: calc(100vh - 60px) !important;">
-                <div class="lg:w-1/2 xl:w-5/12 p-6 sm:p-12" style="margin-top: -70px !important; margin-bottom: 0 !important; ">
+                <div class="lg:w-1/2 xl:w-5/12 p-6 sm:p-12" style="margin-top: 30px !important; margin-bottom: 0 !important; ">
 
                     <div class="mt-12 flex flex-col items-center">
                         <h1 class="text-2xl xl:text-3xl font-extrabold">
@@ -69,7 +68,7 @@
                                         </svg>
                                     </div>
                                     <span class="ml-4">
-                                        Sign Up with Google
+                                        Sign In with Google
                                     </span>
                                 </button>
 
@@ -79,28 +78,31 @@
                             <div class="my-12 border-b text-center" style="margin-top: 20px !important;">
                                 <div
                                     class="leading-none px-2 inline-block text-sm text-gray-600 tracking-wide font-medium bg-white transform translate-y-1/2">
-                                    Or sign up with e-mail
+                                    Or sign in with e-mail
                                 </div>
                             </div>
 
                             <div class="mx-auto max-w-xs">
-                                <form method="post" action="{{ action_url }}" class="entrance signup">
+                                <form method="POST" action="." class="login-form spacer" id="signin-form">
                                     {% csrf_token %}
-                                    <input style="height: 50px !important; margin-top: -20px !important;"
+                                    {% comment %} <input style="height: 50px !important; margin-top: -20px !important;" name="username"
                                         class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                                        type="email" placeholder="Email" />
-                                    <input style="height: 50px !important; margin-top: 20px !important;"
+                                        type="email" placeholder="Email" /> {% endcomment %}
+                                    {{ form.username}}
+                                    {% comment %} <input style="height: 50px !important; margin-top: 20px !important;"
                                         class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
-                                        type="text" placeholder="Username" />
-                                    <input style="height: 50px !important; margin-top: 20px !important;"
+                                        type="text" placeholder="Username" /> {% endcomment %}
+                                    {{form.password}}
+                                        {% comment %} <input style="height: 50px !important; margin-top: 20px !important;"
                                         class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
-                                        type="password" placeholder="Password" />
-                                    <input style="height: 50px !important; margin-top: 20px !important;"
+                                        type="password" placeholder="Password" /> {% endcomment %}
+
+                                        {% comment %} <input style="height: 50px !important; margin-top: 20px !important;"
                                         class="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
-                                        type="password" placeholder="Confirm your password" />
-                                        {% comment %} <input style="background-color: red;" type="submit"> {% endcomment %}
+                                        type="password" placeholder="Confirm your password" /> {% endcomment %}
+                                    {% comment %} <input type="submit" value="Sign up" style="" class="mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">  {% endcomment %}
                                     <button id="submitButton" style="height: 50px !important; margin-top: 20px !important;"
-                                        class="mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
+                                    class="mt-5 tracking-wide font-semibold bg-indigo-500 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
                                         <svg class="w-6 h-6 -ml-2" fill="none" stroke="currentColor" stroke-width="2" type="submit"
                                             stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
@@ -108,7 +110,7 @@
                                             <path d="M20 8v6M23 11h-6" />
                                         </svg>
                                         <span class="ml-3">
-                                            Sign Up
+                                            Sign In
                                         </span>
                                     </button>
                                 </form>

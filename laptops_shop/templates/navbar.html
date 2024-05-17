@@ -12,9 +12,16 @@
   <div class="site-mobile-menu-body container p-0 m-0" style="overflow-y: hidden; height: auto;">
     <div class="pt-3 container bg-dark m-0 p-0" style="height: 100px; overflow-x: hidden;">
       <div class="row mt-3 p-0 d-flex justify-content-evenly">
-        <div class="h5 col-3 text-white p-0 my-0 mx-0">Sign In</div>
-        <div class="m-0 p-0 vr"></div>
-        <div class="h5 text-white col-3 p-0 my-0">Sign Up</div>
+        {% if user.is_authenticated %}
+          <div class="h5 col-3 text-white p-0 my-0 mx-0"><a href="/accounts/user-profile">Accounts</a></div>
+          <div class="m-0 p-0 vr"></div>
+          <div class="h5 text-white col-3 p-0 my-0"><a href="/accounts/logout/">Logout</a></div>
+        {% else %}
+          <div class="h5 col-3 text-white p-0 my-0 mx-0"><a href="/accounts/user-login">Sign In</a></div>
+          <div class="m-0 p-0 vr"></div>
+          <div class="h5 text-white col-3 p-0 my-0"><a href="/accounts/user-registration">Sign Up</a></div>
+        {% endif %}
+        
       </div>
     </div>
     {% comment %} {% endcomment %}
@@ -104,7 +111,7 @@
         </div>
         <div class="col-3 p-0 m-0 h-100" style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
           <img src="{% static 'images/youtube.svg' %}" alt="" title="YouTube" style="height: 30px; scale: 0.7;" class="mx-auto my-auto w-100 h-100" />
-        </div>F
+        </div>
       </div>
     </div>
     {% comment %} {% endcomment %}
@@ -140,7 +147,10 @@
         <img src="{% static 'images/orders.svg' %}" alt="" title="orders" class="orders p-0 col-2" />
         <img src="{% static 'images/wishlist.svg' %}" alt="" title="wishlist" class="wishlist p-0 col-2" />
         <img src="{% static 'images/cart.svg' %}" alt="" title="cart" class="cart p-0 col-2" />
-        <img src="{% static 'images/user_acc.svg' %}" alt="" title="account" class="account p-0 col-2" />
+
+        {% comment %} user profile photo, if user is authenticated {% endcomment %}
+        {% comment %} <img src="{% static 'images/user_acc.svg' %}" alt="" title="account" class="account p-0 col-2" onclick="location.href = '/accounts/user-profile';" /> {% endcomment %}
+        <img src="{{ user.socialaccount_set.all.0.get_avatar_url }}" alt="" title="account" class="account p-0 col-2" onclick="location.href = '/accounts/user-profile';" />
       </div>
     </div>
   {% else %}
@@ -157,7 +167,7 @@
     </div>
     <div class="container visitors p-0 m-0" style="width: 100px !important;">
       <div class="row align-items-center d-flex justify-content-center m-0" style="margin: auto !important;">
-        <img src="{% static 'images/user_acc.svg' %}" alt="" title="sign In/sign Up" class="signIn_signUp p-0" />
+        <img src="{% static 'images/user_acc.svg' %}" alt="" title="sign In/sign Up" class="signIn_signUp p-0" onclick="location.href = '/accounts/user-login';" />
       </div>
     </div>
   {% endif %}
